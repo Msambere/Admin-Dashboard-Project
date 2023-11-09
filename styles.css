@@ -3,11 +3,74 @@
     padding: 0;
 }
 
-.container{
-    text-align: center;
+:root{
+    font-size: 24px;
+
 }
 
-.container div {
-    background-color: blue;
-    gap: 15px;
+.container{
+    text-align: center;
+    display: grid;
+    grid-template-columns:1fr 4fr;
+    gap: 2px;
+}
+
+.container div{
+    border: 1px dotted black;
+}
+
+.sidebar-left {
+    background-color: rgb(135, 197, 221);
+    color: aliceblue;
+    display: grid;
+}
+
+.screen-right{
+    display: grid;
+    grid-template: 20% 80%/ 2fr 2fr 1fr;
+    gap: 10px;
+
+}
+
+.nav{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+}
+
+.top-row {
+    display:grid;
+    grid-template-columns: 4fr 1fr 1fr 2fr;
+}
+
+.bottom-row{
+    display: grid;
+    grid-template-columns: 0.5fr 3fr repeat(3,1fr);
+}
+
+.projects-wrapper{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    margin-bottom: 10px;
+}
+
+.projects{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(autofit, 1fr);
+    gap: 20px;
+}
+
+.sidebar-right{
+    grid-column: 3/ span 1;
+    grid-row: 2/span 1;
+}
+
+.sidebar-right .title{
+    font-size: 1.1rem;
+    font-weight: bold;
 }
