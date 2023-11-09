@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container{
+    text-align: center;
+}
+
+.container div {
+    background-color: blue;
+    gap: 15px;
+}
