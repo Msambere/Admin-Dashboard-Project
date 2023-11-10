@@ -6,23 +6,41 @@
 :root{
     font-size: 24px;
 
+    --main-bgc: gray;
+    --c-lightest: #DAD7CD;
+    --c-light:#A3B18A;
+    --c-middle:#588157;
+    --c-dark:#3A5A40;
+    --c-darkest:#344E41;
+
+
 }
 
 .container{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--c-light);
     text-align: center;
     display: grid;
     grid-template-columns:1fr 4fr;
+    align-items: stretch;
     gap: 2px;
 }
-
+/*
 .container div{
     border: 1px dotted black;
 }
-
+*/
 .sidebar-left {
-    background-color: rgb(135, 197, 221);
-    color: aliceblue;
+    background-color: var(--c-darkest);
+    color: var(--c-lightest);
+
     display: grid;
+}
+
+.sidebar-left .header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .screen-right{
@@ -65,12 +83,30 @@
     gap: 20px;
 }
 
+.card{
+    background-color: white;
+}
+
 .sidebar-right{
     grid-column: 3/ span 1;
     grid-row: 2/span 1;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.announcements>p, .trending>p {
+    font-size: 1.2rem;
+    font-weight: 900;
 }
 
 .sidebar-right .title{
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.sidebar-right .announcements .card {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 5px;
 }
