@@ -50,6 +50,14 @@
     align-items: center;
 }
 
+.logo{
+    justify-self: end;
+}
+
+.header h1{
+    justify-self: left;
+}
+
 .sidebar-left .links ul{
     list-style: none;
     display: grid;
