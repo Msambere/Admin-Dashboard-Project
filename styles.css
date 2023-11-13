@@ -260,11 +260,28 @@ button{
     margin-bottom: 5px;
 }
 
-.sidebar-right .trending{
-    border: 1px solild black;
-}
-
 .sidebar-right .trending .card {
     border-bottom: 1px solid var(--c-darkest);
     margin-bottom: 5px;
+    display: grid;
+    grid-template: repeat(2, 1fr) /55px 1fr;
+    justify-items:left;
+    align-items: center;
+    gap: 10px;
+}
+
+.trending .card img{
+    height: 50px;
+    grid-column: 1/ span 2;
+    grid-row: 1/ span 2;
+}
+
+.trending .card .user-id{
+    grid-column: 2/ span 1;
+    grid-row: 1/span 1;
+}
+
+.trending .card .user-name{
+    grid-column: 2/ span 1;
+    grid-row: 2/span 1;
 }
