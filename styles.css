@@ -102,7 +102,7 @@
 .top-row {
     
     display:grid;
-    grid-template-columns: 50px 4fr 60px 60px 1fr;
+    grid-template-columns: 50px 4fr 60px 60px fit-content(200px);
 }
 
 .top-row img{
@@ -114,6 +114,20 @@
     max-height: 90%;
 }
 
+.avatar-small{
+    height: 48px;
+}
+
+.avatar-large{
+    height: 100px;
+}
+
+.top-row p.user-name{
+    align-self: center;
+    margin-right: 20px;
+    font-weight: 700;
+}
+
 input{
     border-radius: 50px;
     border: none;
@@ -123,8 +137,21 @@ input{
 
 .bottom-row{
     display: grid;
-    grid-template-columns: 0.5fr 3fr repeat(3,1fr);
+    grid-template-columns: 0.5fr 3fr repeat(3, fit-content(200px));
     align-items: center;
+}
+
+.avatar-large{
+    justify-self: center;
+}
+
+.greeting p{
+    text-align: left;
+}
+
+.user {
+    text-align: left;
+    margin-left: 8ch;
 }
 
 button{
@@ -135,7 +162,7 @@ button{
     text-shadow: black 1px 2px 1px;
     height: 2rem;
     width: 100px;
-    
+    margin: 5px;
 
 }
 
