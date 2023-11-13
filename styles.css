@@ -40,7 +40,7 @@
     box-shadow: .1rem 0rem 1rem black;
 
     display: grid;
-    grid-template-rows: 100px 300px 300px;
+    grid-template-rows: 100px repeat(2, fit-content(400px));
     gap: 50px;
 }
 
@@ -62,27 +62,26 @@
     list-style: none;
     display: grid;
     grid-template: repeat(6, 1fr) / 1fr 3fr;
-    column-gap: 10px;
+    gap: 10px;
 }
 
 .sidebar-left .tools ul{
     list-style: none;
     display: grid;
     grid-template: repeat(3, 1fr) / 1fr 3fr;
-    column-gap: 10px;
+    gap: 10px;
+
 }
 
 .links ul img, .tools ul img{
-    max-width: 50%;
-    max-height: 50%;
+    height: 1.15rem;
     justify-self: end;
     align-self: center;
 }
 
 
 .links ul li, .tools ul li{
-    max-width: 50%;
-    max-height: 50%;
+    font-size: 1.15rem;
     justify-self: start;
     align-self: center;
 }
@@ -101,6 +100,7 @@
     background-color: white;
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
+    padding: 10px;
     display: grid;
     grid-template-rows: 1fr 2fr;
     gap: 10px;
@@ -186,7 +186,9 @@ button{
     font-size: 1.5rem;
     font-weight: 700;
     padding: 8px;
+    margin-top: 15px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
 .projects{
@@ -200,11 +202,17 @@ button{
 .card{
     background-color: white;
     border-radius: 3px;
-    padding: 8px;
+  
+}
+
+.card:hover{
+    transform: scale(1.01,1.01);
+    transition: transform 0.3 ease;
 }
 
 .projects .card{
     border-radius: 8px;
+    box-shadow: 2px 2px .5rem black;
     display: grid;
     grid-template: 4fr 1fr / 1fr 18fr;
     justify-self: center;
@@ -213,11 +221,14 @@ button{
     grid-column: 1 / span 1;
     grid-row: 1/ span 2;
     background: linear-gradient(var(--c-darkest), var(--c-middle), var(--c-lightest));
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 .content{
     grid-column: 2 / span 1;
     grid-row: 1/ span 1;
+    padding: 8px;
 }
 .project-icons{
     grid-column: 2/ span 1;
@@ -247,6 +258,7 @@ button{
     font-weight: 900;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding: 8px;
 }
 
 .sidebar-right .title{
@@ -263,6 +275,7 @@ button{
 .sidebar-right .trending .card {
     border-bottom: 1px solid var(--c-darkest);
     margin-bottom: 5px;
+    padding: 8px;
     display: grid;
     grid-template: repeat(2, 1fr) /55px 1fr;
     justify-items:left;
